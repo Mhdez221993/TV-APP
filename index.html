@@ -5,13 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://use.fontawesome.com/f8a3ee0e31.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Templet</title>
+    <title>EuroMovie</title>
 </head>
-<body>
-    <h1 class="text-center pt-5">Templet</h1>
-    
-
+<body class="background" id="body">
+    <div id="model"></div>
+    <header class="py-3">
+        <nav class="desktop-nav">
+            <a class="nav-btn me-auto brand" href="./404.html">EuroMovie</a>
+            <a class="nav-btn top-nav me-4" href="./index.html">Horror</a>
+            <a class="nav-btn top-nav me-4" href="./about.html">SiFi</a>
+            <a class="nav-btn top-nav me-4" href="./courses.html">Cartoon</a>
+        </nav>
+        <nav class="mobile-nav">
+            <i id="burger" class="fa fa-bars humburger" onclick="displyMobileMenu()"></i>
+        </nav>
+        <div id="humburger-nav" class="position-relative">
+            <a class="mobile-menu nav-btn top-nav" href="./index.html">Horror</a>
+            <a class="mobile-menu nav-btn top-nav" href="./about.html">SiFi</a>
+            <a class="mobile-menu nav-btn top-nav" href="./courses.html">Cartoon</a>
+            <i id="close" class="fa fa-times" onclick="menuBack()"></i>
+        </div>
+    </header>
+    <main>
+        <div class="sect-2" id="movies-wrapper">
+            <div class="main-programs"></div>
+        </div>
+    </main>
+    <footer class="py-2">
+        <a class="nav-btn me-auto brand" href="./index.html">EuroMovie</a>
+        <nav class="nav-icons d-flex flex-wrap py-4 justify-content-md-center">
+            <a class="nav-btn me-4" href="https://www.facebook.com/moises.hernandezcoronado" rel="noopener noreferrer" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            <a class="nav-btn me-4" href="https://twitter.com/MoisesH42060050" rel="noopener noreferrer" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a class="nav-btn me-4" href="https://www.linkedin.com/in/moises-hernandez-9bbb17145/" rel="noopener noreferrer" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a class="nav-btn me-4" href="https://github.com/Mhdez221993" rel="noopener noreferrer" target="_blank"><i class="fa fa-github"></i></a>
+            <a class="nav-btn" href="https://app.slack.com/client/T47CT8XPG/learning-slack" rel="noopener noreferrer" target="_blank"><i class="fa fa-slack"></i></a>
+        </nav>
+        <nav class="copyright-nav d-flex flex-wrap py-2">
+            <span class="me-auto nav-btn loto">© EuroMovie 2021 Allright Reserved</span>
+            <a class="me-5 a-end nav-btn top-nav" href="#">Terms and Conditions</a>
+            <a class="nav-btn top-nav" href="#">Privacy & Policy</a>
+        </nav>
+    </footer>
     <script src="./src/index.js"></script>
 </body>
 </html>
