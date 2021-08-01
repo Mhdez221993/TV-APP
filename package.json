@@ -13,7 +13,8 @@
     "prod": "npm run webpack -- --mode production",
     "dev": "npm run webpack -- --mode development --watch",
     "prod:debug": "npm run debug -- --mode production",
-    "dev:debug": "npm run debug -- --mode development"
+    "dev:debug": "npm run debug -- --mode development",
+    "server": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -45,5 +46,9 @@
     "webpack-cli": "^4.7.2",
     "webpack-dev-middleware": "^5.0.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cors-anywhere": "^0.4.4"
   }
 }
