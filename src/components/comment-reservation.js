@@ -1,8 +1,6 @@
-class Modal {
-  constructor(selector='body', myInteractionFetch, commentReservation){
+class CommentReservation {
+  constructor(selector='commnet-reservation'){
     this.selector = selector;
-    this.myInteractionFetch = myInteractionFetch;
-    this.commentReservation = commentReservation;
   }
 
   createMarkup(data, id){
@@ -19,36 +17,21 @@ class Modal {
           <span>Premiered: ${movie.show.premiered}</span>
           <span>Type: ${movie.show.type}</span>
         </div>
-        <section id="commnet-reservation"><section>
       </div>`)}
     </div>`;
   }
   
   render(data, query){
     const buttons = document.querySelectorAll('button');
-    let value = '';
+
     buttons.forEach(button => button.addEventListener('click', (e) => {
 
-      const id = e.target.parentNode.children[4].innerHTML
-      const modal = this.createMarkup(data, Number(id))
+      const commnetReservation = this.createMarkup(data, this.selector)
 
-      document.getElementById(this.selector).innerHTML = modal;
+      document.getElementById(this.selector).innerHTML = commnetReservation;
 
-      this.bindEvent();
-      
-      this.myInteractionFetch(e.target.innerHTML, this.commentReservation)
     }))
-  }
-
-  bindEvent(){
-    const close = document.getElementById('close-modal')
-    close.addEventListener('click', this.close)
-  }
-
-  close(){
-    document.getElementById('modal').remove()
-    location.reload();
   }
 }
 
-module.exports = Modal;
+module.exports = CommentReservation;

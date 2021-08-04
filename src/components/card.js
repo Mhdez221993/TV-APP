@@ -20,7 +20,6 @@ class Card {
   }
   
   render(data, query){
-    console.log(data);
     const movies = this.createMarkup(data, query)
     document.getElementById(this.selector).innerHTML = movies;
   }
