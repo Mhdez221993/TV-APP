@@ -19,5 +19,3 @@ myInteractionFetch = async (query, classEvent) => {
     return e
   }
 }
-
-module.exports = myInteractionFetch;

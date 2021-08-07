@@ -1,8 +1,6 @@
 class Modal {
-  constructor(selector='body', myInteractionFetch, commentReservation){
+  constructor(selector='body'){
     this.selector = selector;
-    this.myInteractionFetch = myInteractionFetch;
-    this.commentReservation = commentReservation;
   }
 
   createMarkup(data, id){
@@ -35,8 +33,6 @@ class Modal {
       document.getElementById(this.selector).innerHTML = modal;
 
       this.bindEvent();
-      
-      this.myInteractionFetch(e.target.innerHTML, this.commentReservation)
     }))
   }
 
